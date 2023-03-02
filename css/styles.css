@@ -1,6 +1,6 @@
 /*
-Author: Maria Cruz
-Date: Current Date
+Author: TG Akoi
+Date: 2-2023
 File Name: styles.css
 */
 
@@ -72,6 +72,10 @@ main p {
     font-size: 1.25em;
 }
 
+main h3 {
+    font-size: 1.5em;
+}
+
 .action {
     font-size: 1.25em;
     color: #373684;
@@ -79,7 +83,9 @@ main p {
 }
 
 #piano, #guitar, #violin {
-    margin: 0 2%;
+    width: 29%;
+    float: left;
+    margin: 2%;
 }
 
 #info {
@@ -89,7 +95,7 @@ main p {
 }
 
 #info ul {
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .round {
@@ -138,4 +144,70 @@ footer {
 footer a {
     color: #4645a8;
     text-decoration: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 550px) , print{
+    
+    /* Tablet Viewpoint: Style rule for header content, hide mobile class */
+    .tab-desk {
+        display: block;
+    }
+    
+    .mobile {
+        display: none;
+    }
+    
+    /* Tablet Viewport: Style rule for header content */
+    span.tab-desk {
+        display: inline;
+    }
+    
+    /* Tablet Viewport: Style rules for nav area */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.5em;
+        border-right: 1px solid #e5e9fc;
+    }
+    
+    nav li:last-child {
+        border-right: none;
+    }
+    
+    nav li a {
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        
+    }
+    
+    /* Tablet Viewport: Style rule for map */
+    .map  {
+        width: 500px;
+        height: 450px;
+    }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 769px) {
+    /* Desktop Viewpoint: Styles rule for nav area */
+    nav li a {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-left: 1.5em;
+        padding left: 1.5em;
+    }
+    
+    nav li a:hover{
+        background: #e5e9fc;
+        color: #373684;
+    }
+    
+    /* Media Query for Print */
+    body {
+        background: #fff;
+        color: #000
+    }
 }
